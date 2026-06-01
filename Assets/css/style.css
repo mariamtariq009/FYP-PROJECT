@@ -1,0 +1,23 @@
+body.light {
+    background-color: #f4f4f9;
+    color: #333;
+}
+body.dark {
+    background-color: #1e1e2f;
+    color: #f4f4f9;
+}
+
+.container { display:flex; justify-content:center; align-items:center; height:100vh; }
+.login-card, main { background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+body.dark .login-card, body.dark main { background:#2c2c3a; }
+
+input { width:100%; padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc;}
+button { padding:10px 20px; border:none; border-radius:5px; background:#007bff; color:#fff; cursor:pointer; margin-top:10px; }
+button:hover { background:#0056b3; }
+
+nav { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#007bff; color:#fff;}
+nav a { color:#fff; margin-left:10px; text-decoration:none; }
+table { width:100%; border-collapse: collapse; margin-top:20px;}
+th, td { border:1px solid #ccc; padding:10px; text-align:left;}
+.success { color:green; }
+.error { color:red; }
