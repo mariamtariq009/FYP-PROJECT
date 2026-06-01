@@ -1,0 +1,350 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    height: 60px;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    background: #ffffff !important; /* default white */
+    transition: all 0.3s ease;
+}
+
+/* Sidebar toggle button */
+#sidebarToggle {
+    font-size: 22px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+/* Theme button */
+.theme-btn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+}
+
+/* User info */
+.user-info {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.user-info small {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.notification-bell {
+    position: relative;
+    display: inline-block;
+}
+
+.badge {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    margin-left: 3px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    z-index: 999;
+    background: #ffffff; /* default white FIXED */
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Toggle */
+.sidebar a.sidebar-dropdown-toggle {
+    font-weight: 600;
+}
+
+/* Dropdown Container */
+.sidebar .sidebar-dropdown {
+    padding-left: 6px;
+}
+
+/* Submenu Links */
+.sidebar a.sidebar-sub {
+    font-size: 14px;
+    padding: 10px 20px 10px 34px;
+}
+
+/* Hover */
+.sidebar a:hover {
+    background: #0d6efd;
+    color: #fff !important;
+    padding-left: 25px;
+}
+
+/* Submenu Hover */
+.sidebar a.sidebar-sub:hover {
+    padding-left: 39px;
+}
+
+/* Active Link */
+.sidebar a.active {
+    background: #0d6efd;
+    color: #fff !important;
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+.content {
+    margin-left: 200px;
+    margin-top: 70px;
+    padding: 10px;
+    min-height: calc(100vh - 70px);
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    border-radius: 12px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+.dropdown-menu {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+.navbar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+body.light {
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* Navbar Light */
+body.light .navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Navbar Text Light */
+body.light .navbar-brand,
+body.light #sidebarToggle,
+body.light .user-info,
+body.light .theme-btn {
+    color: #222 !important;
+}
+
+/* Sidebar Light */
+body.light .sidebar {
+    background: #ffffff !important;
+    border-right: 1px solid #ddd;
+}
+
+/* Sidebar Links Light */
+body.light .sidebar a {
+    color: #444 !important;
+}
+
+/* Cards Light */
+body.light .card {
+    background: #ffffff;
+    color: #333;
+}
+
+/* Dropdown Light */
+body.light .dropdown-menu {
+    background: #ffffff;
+}
+
+body.light .dropdown-item {
+    color: #333;
+}
+
+body.light .dropdown-item:hover {
+    background: #f4f6f9;
+}
+
+/* Table Light */
+body.light th,
+body.light td {
+    border-color: #ddd;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+body.dark {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Navbar Dark */
+body.dark .navbar {
+    background: #1e1e2f !important;
+    border-bottom: 1px solid #333;
+}
+
+/* Navbar Text Dark */
+body.dark .navbar-brand,
+body.dark #sidebarToggle,
+body.dark .user-info,
+body.dark .theme-btn {
+    color: #ffffff !important;
+}
+
+/* Sidebar Dark */
+body.dark .sidebar {
+    background: #1a1a2e !important;
+    border-right: 1px solid #333;
+}
+
+/* Sidebar Links Dark */
+body.dark .sidebar a {
+    color: #bbb !important;
+}
+
+/* Cards Dark */
+body.dark .card {
+    background: #1e1e2f;
+    color: #ffffff;
+}
+
+/* Dropdown Dark */
+body.dark .dropdown-menu {
+    background: #1e1e2f;
+    border-color: #333;
+}
+
+body.dark .dropdown-item {
+    color: #ffffff;
+}
+
+body.dark .dropdown-item:hover {
+    background: #2a2a3c;
+}
+
+/* Table Dark */
+body.dark th,
+body.dark td {
+    border-color: #444;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .sidebar {
+        left: -240px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* =========================
+   SMOOTH ANIMATION
+========================= */
+.sidebar,
+.content,
+.card,
+.navbar,
+.dropdown-menu {
+    transition: all 0.3s ease-in-out;
+}
