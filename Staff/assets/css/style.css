@@ -1,0 +1,76 @@
+/* =========================
+   FIXED SIDEBAR SYSTEM
+========================= */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    padding-top: 70px;
+    overflow-y: auto;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+/* SIDEBAR LINKS */
+.sidebar a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.sidebar a:hover {
+    background: #0d6efd;
+    color: white;
+    padding-left: 25px;
+}
+
+/* ACTIVE */
+.sidebar a.active {
+    background: #0d6efd;
+    color: white !important;
+}
+
+/* MAIN CONTENT (IMPORTANT FIX) */
+.main-content {
+    margin-left: 200px;
+    margin-top: 70px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 992px) {
+
+    .sidebar {
+        left: -220px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* TOGGLE ANIMATION */
+.sidebar,
+.main-content {
+    transition: all 0.3s ease;
+}
